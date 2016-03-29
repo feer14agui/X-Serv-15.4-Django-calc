@@ -6,5 +6,10 @@ urlpatterns = patterns('',
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
+	url(r'^admin/', include(admin.site.urls)),
+	url(r'(?P<num1>\d+)\+(?P<num2>\d+)', 'calc.views.suma'),
+	url(r'(?P<num1>\d+)\-(?P<num2>\d+)', 'calc.views.resta'),
+	url(r'(?P<num1>\d+)\*(?P<num2>\d+)', 'calc.views.multiplicacion'),
+	url)r'(?P<num1>\d+)\/(?P<num2>\d+)', 'calc.views.division'),
+		
 )
